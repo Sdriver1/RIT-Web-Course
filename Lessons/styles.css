@@ -1,0 +1,66 @@
+body {
+  background-color: lightskyblue;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: darkviolet;
+  /* don/t use underline for emphasis */
+  text-decoration: underline overline;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: "Arial", sans-serif;
+  font-weight: bold; /* bold text */
+  font-style: italic; /* italic text */
+  font-variant: small-caps; /* small caps */
+  /* x-offset y-offset blur color */
+  text-shadow: 3px 3px 5px violet; /* text shadow */
+}
+
+table {
+  height: 30vh; /* 50% of the viewport height */
+  width: 30vw; /* 50% of the viewport width */
+  font-size: 1rem;
+  border: 0.3em solid black;
+  padding: 1em; /* padding inside the border */
+  margin: 1em; /* margin outside the border */
+  margin-left: 2em; /* left margin */
+  margin: 1em 2em; /* top/bottom, left/right */
+  margin: 1em 2em 1em; /* top, left/right, bottom */
+  margin: 1em 2em 1em 2em; /* top, right, bottom, left */
+  margin: 2em auto; /* top/bottom, left/right auto */
+  background-color: yellow;
+}
+
+th {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5em;
+}
+
+.first-col {
+  color: #00008d;
+  font-weight: bold;
+}
+
+#GFfavorite {
+  color: rgb(231, 124, 142);
+  font-weight: bold;
+}
+
+h2 span {
+  font-weight: bold;
+}

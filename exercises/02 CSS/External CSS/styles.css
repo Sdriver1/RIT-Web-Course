@@ -1,0 +1,70 @@
+:root {
+  --backgroundcolor: lightskyblue;
+  --textcolor: rgb(0, 0, 0);
+}
+
+body {
+  background-color: var(--backgroundcolor);
+  color: var(--textcolor);
+  font-family: Arial, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  margin-left: 15em;
+}
+
+table {
+  height: 30vh;
+  width: 30vw;
+  font-size: 1rem;
+  border: 0.3em solid black;
+  padding: 1em;
+  margin: 0;
+  background-color: yellow;
+}
+
+#funny {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-variant: small-caps;
+  text-shadow: 3px 3px 5px violet;
+}
+
+.center {
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin-left: 5em;
+  }
+
+  table {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    padding: 0 1em;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    display: none;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+}
