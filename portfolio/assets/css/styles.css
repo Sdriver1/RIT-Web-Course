@@ -1,0 +1,109 @@
+:root {
+  --backgroundcolor: rgb(166, 250, 253);
+  --navbackgroundcolor: rgb(133, 131, 131);
+  --maintextcolor: black;
+  --secondarytextcolor: orange;
+  --buttonbackground: #ffffff;
+  --buttontextcolor: black;
+  --buttonbordercolor: #ffffff;
+}
+
+body {
+  background-color: var(--backgroundcolor);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--maintextcolor);
+  font-size: 1em;
+  margin: 0 1em;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--buttonbackground);
+  color: var(--buttontextcolor);
+  border: 2px solid var(--buttonbordercolor);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.navbar nav a:hover {
+  background-color: var(--buttontextcolor);
+  color: var(--buttonbackground);
+  border-color: var(--buttonbackground);
+}
+
+main {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  color: var(--maintextcolor);
+  font-size: 3em;
+  margin: 0;
+}
+
+#buttons {
+  margin-top: 1em;
+}
+
+.main-button {
+  text-decoration: none;
+  color: var(--buttontextcolor);
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: var(--buttonbackground);
+  border: 2px solid var(--buttonbordercolor);
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.main-button:hover {
+  background-color: var(--buttontextcolor);
+  color: var(--buttonbackground);
+  border-color: var(--buttonbackground);
+}
+
+footer {
+  background-color: var(--backgroundcolor);
+  padding: 1em 0;
+  text-align: center;
+  border-top: none; /* Remove border-top if there was any */
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 2em; /* Adjust gap as needed */
+  flex-wrap: wrap;
+  padding: 0 1em;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: var(--maintextcolor);
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--secondarytextcolor);
+}
+
+.footer-socials i {
+  margin-right: 8px; /* Add space between the icon and the text */
+}
