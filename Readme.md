@@ -10,3 +10,6 @@ Course: [CE-HSPA-1014 - Website Development and Design](https://go.certified.rit
 # Day 2
 - **PreLunch**: Talked in class about how to structure a site and make it look good
 - **PostLunch**: Worked on organizartion of webpages and started work on 5 page resume
+
+# Day 3
+- **PreLunch**: Learning more advanced CSS and fonts
