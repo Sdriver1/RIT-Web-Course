@@ -17,9 +17,23 @@ body {
   min-height: 100vh;
 }
 
-.navbar {
+.navbar,
+footer {
   text-align: center;
   padding: 1em 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0s;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar nav a {
@@ -31,7 +45,6 @@ body {
   padding: 10px 20px;
   background-color: var(--buttonbackground);
   color: var(--buttontextcolor);
-  border: 2px solid var(--buttonbordercolor);
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -40,6 +53,36 @@ body {
   background-color: var(--buttontextcolor);
   color: var(--buttonbackground);
   border-color: var(--buttonbackground);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--buttonbackground);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--buttontextcolor);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--buttontextcolor);
+  color: var(--buttonbackground);
 }
 
 main {
@@ -56,18 +99,27 @@ main {
   margin: 0;
 }
 
+#description {
+  font-size: 1em;
+  margin-top: -0.5em;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 #buttons {
   margin-top: 1em;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
 }
 
 .main-button {
   text-decoration: none;
   color: var(--buttontextcolor);
   padding: 10px 20px;
-  margin: 0 10px;
   background-color: var(--buttonbackground);
-  border: 2px solid var(--buttonbordercolor);
-  border-radius: 5px;
+  border-radius: 2em;
   font-size: 1em;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
@@ -78,19 +130,15 @@ main {
   border-color: var(--buttonbackground);
 }
 
-footer {
-  background-color: var(--backgroundcolor);
-  padding: 1em 0;
-  text-align: center;
-  border-top: none; /* Remove border-top if there was any */
-}
-
 .footer-socials {
   display: flex;
   justify-content: center;
-  gap: 2em; /* Adjust gap as needed */
+  gap: 2em;
   flex-wrap: wrap;
   padding: 0 1em;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0s;
 }
 
 .footer-socials a {
@@ -105,5 +153,50 @@ footer {
 }
 
 .footer-socials i {
-  margin-right: 8px; /* Add space between the icon and the text */
+  margin-right: 8px;
+  transition: transform 0.5s, font-size 0.5s, text-shadow 0.5s;
+}
+
+.footer-socials a:hover i {
+  transform: rotate(360deg) scale(1.2);
+  font-size: 1.2em;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLong {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeInLong {
+  animation: fadeInLong 1.5s forwards;
+}
+
+@media (max-width: 1000px) {
+  .navbar nav a {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .dropdown.show .dropdown-content {
+    display: block;
+    border-radius: 0 0 5px 5px;
+  }
+
+  footer {
+    padding: 0.5em 0;
+  }
 }

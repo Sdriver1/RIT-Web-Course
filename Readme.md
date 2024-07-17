@@ -13,3 +13,4 @@ Course: [CE-HSPA-1014 - Website Development and Design](https://go.certified.rit
 
 # Day 3
 - **PreLunch**: Learning more advanced CSS and fonts
+- **PostLunch**: More work on portfolio
