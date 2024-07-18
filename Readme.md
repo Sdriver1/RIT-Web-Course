@@ -14,3 +14,7 @@ Course: [CE-HSPA-1014 - Website Development and Design](https://go.certified.rit
 # Day 3
 - **PreLunch**: Learning more advanced CSS and fonts
 - **PostLunch**: More work on portfolio
+
+# Day 4
+- **PreLunch**: Tour of the [SHED](https://www.rit.edu/shed) and Learning Basics of JavaScript
+- **PostLunch**: Learning more on JavaScript and more work on portfolio

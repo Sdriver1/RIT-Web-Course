@@ -23,31 +23,14 @@ const serveHTML = (route, file) => {
 };
 
 const htmlRoutes = [
-  { route: "/", file: "../../index.html" },
+  { route: "/home", file: "../../index.html" },
   { route: "/resume", file: "../../resume.html" },
   { route: "/photos", file: "../../photos.html" },
+  { route: "/movies", file: "../../movies.html" },
+  { route: "/songs", file: "../../songs.html" },
 ];
 
 htmlRoutes.forEach((route) => serveHTML(route.route, route.file));
-
-app.get("/favorites/:favorite", (req, res) => {
-  const favname = ["movies", "songs", "foods"];
-  const favorite = req.params.favorite;
-  const errorPath = join(__dirname, "../../404.html");
-  if (!favname.includes(favorite)) {
-    res.sendFile(errorPath);
-    return;
-  }
-  const favoritePath = join(__dirname, `../../${favorite}.html`);
-
-  fs.access(favoritePath, fs.constants.F_OK, (err) => {
-    if (err) {
-      res.status(404).send("Favorite not found");
-    } else {
-      res.sendFile(favoritePath);
-    }
-  });
-});
 
 app.get("/images/:imageName", (req, res) => {
   const imageName = req.params.imageName;
