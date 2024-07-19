@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <title>JS Intro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .square {
+      float: left;
+      height: 20px;
+      width: 20px;
+    }
+  </style>
+</head>
+<body>
+  <input type="button" id="start-btn" value="Build Splotches!" onclick="start();">
+  <script>
+    const splotches = []; 
+
+    function ranNum() {
+      const randomNumber = parseInt(Math.random() * 255);
+      return randomNumber;
+    }
+
+    function buildSplotch() {
+      const ele = document.createElement(`div`);
+      ele.setAttribute(`class`,`square`);
+      ele.style.backgroundColor = `rgb(${ranNum()},${ranNum()},${ranNum()})`;
+      ele.style.opacity = .2;
+      ele.addEventListener(`mouseover`,(evt) => {
+        ele.animate(
+          [
+            {
+              opacity:1,
+              transform:`scale(2)`,
+              borderRadius:`10px`
+            }
+          ],
+          {
+            duration:500,
+            direction:`alternate`,
+            iterations:2,
+            easing:`ease-out`
+          }
+        );
+      });
+      return ele;
+    }
+
+    function start() {
+      document.querySelector(`#start-btn`).remove();
+      const numSquares = parseInt(window.innerWidth/20) * parseInt(window.innerHeight/20)
+      for (let i = 0; i < numSquares; i++) {
+        document.body.appendChild(buildSplotch());
+      }
+    }
+  </script>
+</body>
+</html>

@@ -23,11 +23,12 @@ const serveHTML = (route, file) => {
 };
 
 const htmlRoutes = [
-  { route: "/home", file: "../../index.html" },
+  { route: "/home", file: "../../home.html" },
   { route: "/resume", file: "../../resume.html" },
   { route: "/photos", file: "../../photos.html" },
   { route: "/movies", file: "../../movies.html" },
   { route: "/songs", file: "../../songs.html" },
+  { route: "/colors", file: "../../shapescolors.html" },
 ];
 
 htmlRoutes.forEach((route) => serveHTML(route.route, route.file));

@@ -16,13 +16,6 @@ body {
   min-height: 100vh;
 }
 
-#image {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
 .navbar,
 footer {
   text-align: center;
@@ -89,10 +82,11 @@ main {
   margin: 2em auto;
   font-size: 0.5em;
   opacity: 0;
-  max-width: 60%;
+  max-width: 60%; 
   animation: fadeIn 1s forwards;
   animation-delay: 0s;
 }
+
 
 #buttons {
   margin-top: 1em;
